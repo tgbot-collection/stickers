@@ -38,7 +38,7 @@ async def help_handler(client: "Client", message: "types.Message"):
     await message.reply_text(constants.help_text)
 
 
-@app.on_message(filters.command(["batch_start", "batch_end"]))
+@app.on_message(filters.command(["batch_start", "batch_stop"]))
 async def batch_start(client: "Client", message: "types.Message"):
     if message.text == "/batch_start":
         batch[message.from_user.id] = tempfile.mkdtemp()

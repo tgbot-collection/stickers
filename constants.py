@@ -18,11 +18,11 @@ Emoji stickers: send custom emoji. You can send multiple emoji at once
 2⃣️ What is batch mode?
 Batch mode is a mode that allows you to download multiple stickers at once.
 To start batch mode, send /batch_start, then send your stickers as many as you want.
-When you are done, send /batch_end, and the bot will send you a zip file containing all the stickers.
+When you are done, send /batch_stop, and the bot will send you a zip file containing all the stickers.
 
 3⃣️ How to download an entire sticker pack?
 Just send the sticker set link to the bot.
     """
 
 batch_start = "Batch download started, please send your sticker!"
-batch_save = "Sticker saved. Send /batch_end if you're done."
+batch_save = "Sticker saved. Send /batch_stop if you're done."
