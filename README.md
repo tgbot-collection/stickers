@@ -1,4 +1,4 @@
-[# sticker
+# Telegram Sticker Downloader
 
 Download Telegram sticker
 [https://t.me/benny_sticker_bot](https://t.me/benny_sticker_bot)
