@@ -67,6 +67,12 @@ async def entire_set(client: "Client", message: "types.Message"):
             async for chunk in client.get_file(file_id):
                 file.write(chunk)
 
+    # convert all files in tempdir, delete old file
+    logging.info("Converting files for entire sticker set...")
+    for f in Path(tempdir).glob("*"):
+        converter(f)
+        f.unlink()
+
     with tempfile.NamedTemporaryFile(suffix=".zip") as zip_filepath:
         zip_dir(tempdir, zip_filepath)
         await message.reply_chat_action(enums.ChatAction.UPLOAD_DOCUMENT)

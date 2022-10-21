@@ -4,7 +4,7 @@
 # stickers - constants.py
 # 2022-10-20  23:26
 
-start_text = ("Telegram sticker download bot. @BennyThink"
+start_text = ("Telegram sticker download bot. @BennyThink\n"
               "This bot supports all types of stickers, including animated stickers and even tgs format.")
 
 help_text = \
