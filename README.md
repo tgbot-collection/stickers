@@ -20,6 +20,7 @@ start - Start bot
 help - How to use
 batch_start - Start batch download
 batch_stop - Stop batch download
+ping - Bot running status
 ```
 
 # screenshot

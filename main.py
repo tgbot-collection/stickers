@@ -13,6 +13,7 @@ from pathlib import Path
 from pyrogram import Client, enums, filters, types
 from pyrogram.raw import functions
 from pyrogram.raw import types as raw_types
+from tgbot_ping import get_runtime
 
 import constants
 from helpers import converter, get_ext_from_mime, get_file_id, zip_dir
@@ -36,6 +37,16 @@ async def start_handler(client: "Client", message: "types.Message"):
 @app.on_message(filters.command(["help"]))
 async def help_handler(client: "Client", message: "types.Message"):
     await message.reply_text(constants.help_text)
+
+
+@app.on_message(filters.command(["ping"]))
+def ping_handler(client: "Client", message: "types.Message"):
+    message.reply_chat_action(enums.ChatAction.TYPING)
+    if os.uname().sysname == "Darwin":
+        bot_info = "test"
+    else:
+        bot_info = get_runtime("botsrunner_stickers_1")
+    message.reply_text(bot_info)
 
 
 @app.on_message(filters.command(["batch_start", "batch_stop"]))
