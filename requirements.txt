@@ -1,5 +1,5 @@
-pyrogram==2.0.59
+pyrogram==2.0.106
 TgCrypto==1.2.4
 lottie[GIF]==0.7.0
-cairosvg==2.5.2
+cairosvg==2.7.1
 tgbot_ping
